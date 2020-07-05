@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>A demonstration of how to access a Checkbox</h3>
+
+<input type="checkbox" id="CPP"> C++ (4 years)
+<input type="checkbox" id="CSharp"> C# (2 years)
+<input type="checkbox" id="SQL"> SQL (1 year)
+<input type="checkbox" id="Python"> Python (1 year)
+<input type="checkbox" id="Java"> Java (1 year)
+<input type="checkbox" id="Node"> Node.js (1 year)
+<input type="checkbox" id="Git"> Git (4 years)
+<input type="checkbox" id="SQL"> SQL (1 year)
+<input type="checkbox" id="JS"> JavaScript (2 years)
+<input type="checkbox" id="JSON"> JSON and XML (1 year)
+
+
+<p>Click the "Try it" button to check the checkbox.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+var url = "http://localhost:8080/default.htm?skills="
+function myFunction() {
+  var x = document.getElementById("CPP");
+  if (x.checked)
+	{
+
+     if (url.endsWith("="))
+     {
+       url = url + "C++ (4 years)";
+     }
+     else
+     {
+       url = url + "C++ (4 years)";
+     }
+	}
+
+  x = document.getElementById("CSharp");
+  if (x.checked)
+	{
+    if (url.endsWith("="))
+    {
+      url = url + "C# (2 years)";
+    }
+    else
+    {
+      url = url + ",C# (2 years)";
+    }
+
+
+	}
+
+  var x = document.getElementById("SQL");
+  if (x.checked)
+	{
+    if (url.endsWith("="))
+    {
+      url = url + "SQL (1 year)";
+    }
+    else
+    {
+      url = url + ", SQL (1 year)";
+    }
+
+	}
+
+  var x = document.getElementById("Python");
+  if (x.checked)
+	{
+	   url = url + ", Python (1 year)";
+	}
+
+  var x = document.getElementById("Java");
+  if (x.checked)
+	{
+	   url = url + ", Java (1 year)";
+	}
+
+  var x = document.getElementById("Node");
+  if (x.checked)
+	{
+    if (url.endsWith("="))
+    {
+      url = url + "Node.js (1 year)";
+    }
+    else
+    {
+      url = url + ", Node.js (1 year)";
+    }
+
+	}
+
+  var x = document.getElementById("Git");
+  if (x.checked)
+	{
+	   url = url + ", Git (4 years)";
+	}
+
+  var x = document.getElementById("SQL");
+  if (x.checked)
+	{
+	   url = url + ", SQL (1 year)";
+	}
+
+  var x = document.getElementById("JS");
+  if (x.checked)
+	{
+    if (url.endsWith("="))
+    {
+      url = url + "JavaScript (2 years)";
+    }
+    else
+    {
+      url = url + ", JavaScript (2 years)";
+    }
+
+	}
+
+  var x = document.getElementById("JSON");
+  if (x.checked)
+	{
+	   url = url + ", JSON and XML (1 year)";
+	}
+	console.log(url);
+
+
+}
+</script>
+
+</body>
+</html>
