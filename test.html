@@ -2,27 +2,29 @@
 <html>
 <body>
 
-<h3>A demonstration of how to access a Checkbox</h3>
 
-<input type="checkbox" id="CPP"> C++ (4 years)
-<input type="checkbox" id="CSharp"> C# (2 years)
-<input type="checkbox" id="SQL"> SQL (1 year)
-<input type="checkbox" id="Python"> Python (1 year)
-<input type="checkbox" id="Java"> Java (1 year)
-<input type="checkbox" id="Node"> Node.js (1 year)
-<input type="checkbox" id="Git"> Git (4 years)
-<input type="checkbox" id="SQL"> SQL (1 year)
-<input type="checkbox" id="JS"> JavaScript (2 years)
-<input type="checkbox" id="JSON"> JSON and XML (1 year)
+<ul>
+  <li><input type="checkbox" id="CPP"> C++ (4 years)</li>
+  <li><input type="checkbox" id="CSharp"> C# (2 years)</li>
+  <li><input type="checkbox" id="SQL"> SQL (1 year)</li>
+  <li><input type="checkbox" id="Python"> Python (1 year)</li>
+  <li><input type="checkbox" id="Java"> Java (1 year)</li>
+  <li><input type="checkbox" id="Node"> Node.js (1 year)</li>
+  <li><input type="checkbox" id="Git"> Git (4 years)</li>
+  <li><input type="checkbox" id="SQL"> SQL (1 year)</li>
+  <li><input type="checkbox" id="JS"> JavaScript (2 years)</li>
+  <li><input type="checkbox" id="JSON"> JSON and XML (1 year)</li>
+</ul>
 
 
-<p>Click the "Try it" button to check the checkbox.</p>
 
 <button onclick="myFunction()">Try it</button>
-
+<p id="demo"></p>
 <script>
-var url = "http://localhost:8080/default.htm?skills="
+var url = ""
 function myFunction() {
+
+
   var x = document.getElementById("CPP");
   if (x.checked)
 	{
@@ -124,6 +126,8 @@ function myFunction() {
 	   url = url + ", JSON and XML (1 year)";
 	}
 	console.log(url);
+
+  document.getElementById("demo").innerHTML = url;
 
 
 }
