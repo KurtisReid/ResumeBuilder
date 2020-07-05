@@ -1,6 +1,10 @@
 var http = require('http');
 const officegen = require('officegen')
 const fs = require('fs')
+var url = require('url');
+var adr = 'http://localhost:8080/default.htm?year=Node.js (1 year), Python (1 year), Git (4 years), SQL (1 year), JavaScript (2 years), JSON and XML (1 year)&month=march';
+//Parse the address:
+var q = url.parse(adr, true);
 
 http.createServer(function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/plain'});
@@ -24,7 +28,7 @@ docx.on('error', function(err) {
 // Create a new paragraph:
 let pObj = docx.createP()
  
-pObj.addText('Simple')
+pObj.addText(q.search)
 pObj.addText(' with color', { color: '000088' })
 pObj.addText(' and back color.', { color: '00ffff', back: '000088' })
  
