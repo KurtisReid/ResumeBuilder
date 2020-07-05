@@ -27,8 +27,8 @@ docx.on('error', function(err) {
  
 // Create a new paragraph:
 let pObj = docx.createP()
- 
-pObj.addText(q.search)
+var uri_dec = decodeURIComponent(q.search)
+pObj.addText(uri_dec)
 pObj.addText(' with color', { color: '000088' })
 pObj.addText(' and back color.', { color: '00ffff', back: '000088' })
  
