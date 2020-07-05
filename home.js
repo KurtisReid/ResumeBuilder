@@ -2,7 +2,7 @@ var http = require('http');
 const officegen = require('officegen')
 const fs = require('fs')
 var url = require('url');
-var adr = 'http://localhost:8080/default.htm?year=Node.js (1 year), Python (1 year), Git (4 years), SQL (1 year), JavaScript (2 years), JSON and XML (1 year)&month=march';
+var adr = 'http://localhost:8080/default.htm?skills=Node.js (1 year), Python (1 year), Git (4 years), SQL (1 year), JavaScript (2 years), JSON and XML (1 year)';
 //Parse the address:
 var q = url.parse(adr, true);
 
@@ -27,8 +27,12 @@ docx.on('error', function(err) {
  
 // Create a new paragraph:
 let pObj = docx.createP()
+//remove junk from url
 var uri_dec = decodeURIComponent(q.search)
-pObj.addText(uri_dec)
+var skills = uri_dec.substring('skills='.length+1)
+pObj.addText(skills)
+
+
 pObj.addText(' with color', { color: '000088' })
 pObj.addText(' and back color.', { color: '00ffff', back: '000088' })
  
