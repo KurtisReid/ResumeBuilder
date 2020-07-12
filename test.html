@@ -1,170 +1,170 @@
 <!DOCTYPE html>
 <html>
-<body>
+	<body>
 
 
-<ul>
-  <li><input type="checkbox" id="CPP"> C++ (4 years)</li>
-  <li><input type="checkbox" id="CSharp"> C# (2 years)</li>
-  <li><input type="checkbox" id="SQL"> SQL (1 year)</li>
-  <li><input type="checkbox" id="Python"> Python (1 year)</li>
-  <li><input type="checkbox" id="Java"> Java (1 year)</li>
-  <li><input type="checkbox" id="Node"> Node.js (1 year)</li>
-  <li><input type="checkbox" id="Git"> Git (4 years)</li>
-  <li><input type="checkbox" id="SQL"> SQL (1 year)</li>
-  <li><input type="checkbox" id="JS"> JavaScript (2 years)</li>
-  <li><input type="checkbox" id="JSON"> JSON and XML (1 year)</li>
-</ul>
+		<ul>
+			<li><input type="checkbox" id="CPP"> C++ (4 years)</li>
+			<li><input type="checkbox" id="CSharp"> C# (2 years)</li>
+			<li><input type="checkbox" id="SQL"> SQL (1 year)</li>
+			<li><input type="checkbox" id="Python"> Python (1 year)</li>
+			<li><input type="checkbox" id="Java"> Java (1 year)</li>
+			<li><input type="checkbox" id="Node"> Node.js (1 year)</li>
+			<li><input type="checkbox" id="Git"> Git (4 years)</li>
+			<li><input type="checkbox" id="SQL"> SQL (1 year)</li>
+			<li><input type="checkbox" id="JS"> JavaScript (2 years)</li>
+			<li><input type="checkbox" id="JSON"> JSON and XML (1 year)</li>
+		</ul>
 
 
 
-<button onclick="myFunction()">Try it</button>
-<p id="demo"></p>
-<label for="cars">1</label>
+		<button onclick="myFunction()">Try it</button>
+		<p id="demo"></p>
+		<label for="cars">1</label>
 
-<select name="Position1" id="Position1">
-  <option value="Tech Mahindra">Tech Mahindra</option>
-  <option value="Union Home">Union Home</option>
-  <option value="URA">URA</option>
-</select>
+		<select name="Position1" id="Position1">
+			<option value="Tech Mahindra">Tech Mahindra</option>
+			<option value="Union Home">Union Home</option>
+			<option value="URA">URA</option>
+		</select>
 
-<label for="Position2">2</label>
+		<label for="Position2">2</label>
 
-<select name="Position2" id="Position2">
-  <option value="Tech Mahindra">Tech Mahindra</option>
-  <option value="Union Home">Union Home</option>
-  <option value="URA">URA</option>
-</select>
+		<select name="Position2" id="Position2">
+			<option value="Tech Mahindra">Tech Mahindra</option>
+			<option value="Union Home">Union Home</option>
+			<option value="URA">URA</option>
+		</select>
 
-<label for="Position3">3</label>
+		<label for="Position3">3</label>
 
-<select name="Position3" id="Position3">
-  <option value="Tech Mahindra">Tech Mahindra</option>
-  <option value="Union Home">Union Home</option>
-  <option value="URA">URA</option>
-</select>
+		<select name="Position3" id="Position3">
+			<option value="Tech Mahindra">Tech Mahindra</option>
+			<option value="Union Home">Union Home</option>
+			<option value="URA">URA</option>
+		</select>
 
-<script>
-var url = "http://localhost:8080/default.htm?skills="
-function myFunction() {
+		<script>
+		var url = "http://localhost:8080/default.htm?skills="
+		function myFunction() {
 
-<!-- add skill level -->
-  var x = document.getElementById("CPP");
-  
+		<!-- add skill level -->
+		  var x = document.getElementById("CPP");
+		  
 
-  
-  if (x.checked)
-	{
+		  
+		  if (x.checked)
+			{
 
-     if (url.endsWith("="))
-     {
-       url = url + "C++ (4 years)";
-     }
-     else
-     {
-       url = url + "C++ (4 years)";
-     }
-	}
+			 if (url.endsWith("="))
+			 {
+			   url = url + "C++ (4 years)";
+			 }
+			 else
+			 {
+			   url = url + "C++ (4 years)";
+			 }
+			}
 
-  x = document.getElementById("CSharp");
-  if (x.checked)
-	{
-    if (url.endsWith("="))
-    {
-      url = url + "C# (2 years)";
-    }
-    else
-    {
-      url = url + ",C# (2 years)";
-    }
+		  x = document.getElementById("CSharp");
+		  if (x.checked)
+			{
+				if (url.endsWith("="))
+				{
+				  url = url + "C# (2 years)";
+				}
+				else
+				{
+				  url = url + ",C# (2 years)";
+				}
 
 
-	}
+			}
 
-  var x = document.getElementById("SQL");
-  if (x.checked)
-	{
-    if (url.endsWith("="))
-    {
-      url = url + "SQL (1 year)";
-    }
-    else
-    {
-      url = url + ", SQL (1 year)";
-    }
+		  var x = document.getElementById("SQL");
+		  if (x.checked)
+			{
+				if (url.endsWith("="))
+				{
+				  url = url + "SQL (1 year)";
+				}
+				else
+				{
+				  url = url + ", SQL (1 year)";
+				}
 
-	}
+			}
 
-  var x = document.getElementById("Python");
-  if (x.checked)
-	{
-	   url = url + ", Python (1 year)";
-	}
+		  var x = document.getElementById("Python");
+		  if (x.checked)
+			{
+			   url = url + ", Python (1 year)";
+			}
 
-  var x = document.getElementById("Java");
-  if (x.checked)
-	{
-	   url = url + ", Java (1 year)";
-	}
+		  var x = document.getElementById("Java");
+		  if (x.checked)
+			{
+			   url = url + ", Java (1 year)";
+			}
 
-  var x = document.getElementById("Node");
-  if (x.checked)
-	{
-    if (url.endsWith("="))
-    {
-      url = url + "Node.js (1 year)";
-    }
-    else
-    {
-      url = url + ", Node.js (1 year)";
-    }
+		  var x = document.getElementById("Node");
+		  if (x.checked)
+			{
+				if (url.endsWith("="))
+				{
+				  url = url + "Node.js (1 year)";
+				}
+				else
+				{
+				  url = url + ", Node.js (1 year)";
+				}
 
-	}
+			}
 
-  var x = document.getElementById("Git");
-  if (x.checked)
-	{
-	   url = url + ", Git (4 years)";
-	}
+		  var x = document.getElementById("Git");
+		  if (x.checked)
+			{
+			   url = url + ", Git (4 years)";
+			}
 
-  var x = document.getElementById("SQL");
-  if (x.checked)
-	{
-	   url = url + ", SQL (1 year)";
-	}
+		  var x = document.getElementById("SQL");
+		  if (x.checked)
+			{
+			   url = url + ", SQL (1 year)";
+			}
 
-  var x = document.getElementById("JS");
-  if (x.checked)
-	{
-    if (url.endsWith("="))
-    {
-      url = url + "JavaScript (2 years)";
-    }
-    else
-    {
-      url = url + ", JavaScript (2 years)";
-    }
+		  var x = document.getElementById("JS");
+		  if (x.checked)
+			{
+				if (url.endsWith("="))
+				{
+				  url = url + "JavaScript (2 years)";
+				}
+				else
+				{
+				  url = url + ", JavaScript (2 years)";
+				}
 
-	}
+			}
 
-  var x = document.getElementById("JSON");
-  if (x.checked)
-	{
-	   url = url + ", JSON and XML (1 year)";
-	}
-	
-	
-	  <!--get position of work expereince on resume -->
-  var work_expereince_one = document.getElementById("Position1").value;
-  var work_expereince_two = document.getElementById("Position2").value;
-  var work_expereince_three = document.getElementById("Position3").value;
-  url = url + "/positions=" + work_expereince_one + "," + work_expereince_two + "," + work_expereince_three;
+		  var x = document.getElementById("JSON");
+		  if (x.checked)
+			{
+			   url = url + ", JSON and XML (1 year)";
+			}
+			
+			
+			  <!--get position of work expereince on resume -->
+		  var work_expereince_one = document.getElementById("Position1").value;
+		  var work_expereince_two = document.getElementById("Position2").value;
+		  var work_expereince_three = document.getElementById("Position3").value;
+		  url = url + "/positions=" + work_expereince_one + "," + work_expereince_two + "," + work_expereince_three;
 
-  document.getElementById("demo").innerHTML = url;
-	console.log(url);
+		  document.getElementById("demo").innerHTML = url;
+			console.log(url);
 
-}
-</script>
+		}
+		</script>
 
-</body>
+	</body>
 </html>

@@ -17,70 +17,50 @@ http.createServer(function (req, res) {
 function printDoc(urlParam) {
 	console.log("function: " + urlParam);
 	let docx = officegen('docx')
- 
-// Officegen calling this function after finishing to generate the docx document:
-	docx.on('finalize', function(written) {
-  console.log(
-    'Finish to create a Microsoft Word document.'
-  )
-})
- 
-// Officegen calling this function to report errors:
-docx.on('error', function(err) {
-  console.log(err)
-})
- 
- // split string at / for skills and positions
- var positions = urlParam.split("/");
-console.log("skills = " + positions[0]);
-console.log("positions = " + positions[1]); 
+	 
+	// Officegen calling this function after finishing to generate the docx document:
+		docx.on('finalize', function(written) {
+	  console.log(
+		'Finish to create a Microsoft Word document.'
+	  )
+	})
+	 
+	// Officegen calling this function to report errors:
+	docx.on('error', function(err) {
+	  console.log(err)
+	})
+	 
+	 // split string at / for skills and positions
+	var positions = urlParam.split("/");
+	console.log("skills = " + positions[0]);
+	console.log("positions = " + positions[1]); 
 
-// Create a new paragraph:
-let pObj = docx.createP()
-pObj.addText(positions[0]);
-pObj = docx.createP();
+	// adding list of skills
+	let pObj = docx.createP()
+	pObj.addText(positions[0]);
+	pObj = docx.createP();
 
-pObj.addText(positions[1]);
-var removeID = positions[1].split("=");
-printPositions(removeID[1], pObj, docx)
+	//removing url id from string
+	var removeID = positions[1].split("=");
 
-//remove junk from url
-//var uri_dec = decodeURIComponent(urlParam.search)
-//var skills = urlParam.substring('skills='.length+1)
-//pObj.addText(skills)
+	//printing previous positions to document
+	printPositions(removeID[1], pObj, docx);
 
-// get access to URLSearchParams object
-//const search_params = current_url.searchParams;
-
-// get url parameters
-//const id = search_params.get('skills');
+	 
+	// Let's generate the Word document into a file:
+	 
+	let out = fs.createWriteStream('example.docx')
 
 
-// "123"
-//console.log(id);
-
-
-
-
-
- 
-// We can even add images:
-//pObj.addImage('some-image.png')
- 
-// Let's generate the Word document into a file:
- 
-let out = fs.createWriteStream('example.docx')
-
-
- 
-out.on('error', function(err) {
-  console.log(err)
-})
- 
-// Async call to generate the output file:
-docx.generate(out)
-   // function body
-   // optional return; 
+	 
+	out.on('error', function(err) {
+	  console.log(err)
+	})
+	 
+	// Async call to generate the output file:
+	docx.generate(out)
+	   // function body
+	   // optional return; 
 } 
 console.log(texty);
 
