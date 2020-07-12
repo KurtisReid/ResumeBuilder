@@ -34,13 +34,16 @@ docx.on('error', function(err) {
  var positions = urlParam.split("/");
 console.log("skills = " + positions[0]);
 console.log("positions = " + positions[1]); 
+
 // Create a new paragraph:
 let pObj = docx.createP()
 pObj.addText(positions[0]);
 pObj = docx.createP();
 
 pObj.addText(positions[1]);
-printTechMahindra(pObj, docx);
+var removeID = positions[1].split("=");
+printPositions(removeID[1], pObj, docx)
+
 //remove junk from url
 //var uri_dec = decodeURIComponent(urlParam.search)
 //var skills = urlParam.substring('skills='.length+1)
@@ -84,6 +87,7 @@ console.log(texty);
 function printPositions(orderedPositions, pObj, docx)
 {
 	// printing the previous positions in document
+	
 	console.log("printPositions: " + orderedPositions);
 	var order = orderedPositions.split(",");
 	var i;
@@ -95,12 +99,12 @@ function printPositions(orderedPositions, pObj, docx)
 		}
 		else if (order[i] == "Union Home")
 		{
-			//print union home
+			printUHM(pObj, docx);
 			
 		}
 		else 
 		{
-			//print URA
+			printURA(pObj, docx);
 		}
 	}
 
