@@ -45,17 +45,13 @@
 </select>
 
 <script>
-var url = ""
+var url = "http://localhost:8080/default.htm?skills="
 function myFunction() {
 
 <!-- add skill level -->
   var x = document.getElementById("CPP");
   
-  <!--get position of work expereince on resume -->
-  var work_expereince_one = document.getElementById("Position1").value;
-  var work_expereince_two = document.getElementById("Position2").value;
-  var work_expereince_three = document.getElementById("Position3").value;
-  url = url + work_expereince_one + "," + work_expereince_two + "," + work_expereince_three + "&skills=";
+
   
   if (x.checked)
 	{
@@ -156,10 +152,16 @@ function myFunction() {
 	{
 	   url = url + ", JSON and XML (1 year)";
 	}
-	console.log(url);
+	
+	
+	  <!--get position of work expereince on resume -->
+  var work_expereince_one = document.getElementById("Position1").value;
+  var work_expereince_two = document.getElementById("Position2").value;
+  var work_expereince_three = document.getElementById("Position3").value;
+  url = url + "/positions=" + work_expereince_one + "," + work_expereince_two + "," + work_expereince_three;
 
   document.getElementById("demo").innerHTML = url;
-
+	console.log(url);
 
 }
 </script>
