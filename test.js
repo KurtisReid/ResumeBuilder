@@ -39,6 +39,7 @@ let pObj = docx.createP()
 pObj.addText(positions[0]);
 pObj = docx.createP();
 pObj.addText(positions[1]);
+printTechMahindra(pObj, docx);
 //remove junk from url
 //var uri_dec = decodeURIComponent(urlParam.search)
 //var skills = urlParam.substring('skills='.length+1)
@@ -78,3 +79,25 @@ docx.generate(out)
    // optional return; 
 } 
 console.log(texty);
+
+function printPositions(orderedPositions, pObj)
+{
+	// printing the previous positions in document
+	var order = orderedPositions.split(",");
+	
+	
+}
+function printTechMahindra(pObj, docx)
+{
+	pObj = docx.createP();
+	pObj.addText('Junior Software Developer', { bold: true, underline: true });
+	pObj = docx.createP();
+	pObj.addText('GE Transportation (Tech Mahindra) - Melbourne, Florida 				March 2018 to November 2019');
+	pObj = docx.createP();
+	pObj = docx.createListOfDots ();
+	pObj.addText ( 'Speed up analysis of train performance data from 3 hours to 15 minutes through the development of MS Excel macros' );
+	pObj = docx.createListOfDots ();
+	pObj.addText('Collected historical data and third-party data from different data source including Linux environment ');
+	pObj = docx.createListOfDots ();
+	pObj.addText ( 'Reduced manual effort to a minute by automating file creation' );
+}
