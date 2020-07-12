@@ -36,7 +36,9 @@ console.log("skills = " + positions[0]);
 console.log("positions = " + positions[1]); 
 // Create a new paragraph:
 let pObj = docx.createP()
-pObj.addText(urlParam);
+pObj.addText(positions[0]);
+pObj = docx.createP();
+pObj.addText(positions[1]);
 //remove junk from url
 //var uri_dec = decodeURIComponent(urlParam.search)
 //var skills = urlParam.substring('skills='.length+1)
