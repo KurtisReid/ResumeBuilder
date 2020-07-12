@@ -2,37 +2,136 @@
 <html>
 <body>
 
-<h1>Show Checkboxes</h1>
 
-<p id="demo">hello</p>
+<ul>
+  <li><input type="checkbox" id="CPP"> C++ (4 years)</li>
+  <li><input type="checkbox" id="CSharp"> C# (2 years)</li>
+  <li><input type="checkbox" id="SQL"> SQL (1 year)</li>
+  <li><input type="checkbox" id="Python"> Python (1 year)</li>
+  <li><input type="checkbox" id="Java"> Java (1 year)</li>
+  <li><input type="checkbox" id="Node"> Node.js (1 year)</li>
+  <li><input type="checkbox" id="Git"> Git (4 years)</li>
+  <li><input type="checkbox" id="SQL"> SQL (1 year)</li>
+  <li><input type="checkbox" id="JS"> JavaScript (2 years)</li>
+  <li><input type="checkbox" id="JSON"> JSON and XML (1 year)</li>
+</ul>
 
-<script>
-document.getElementById("demo").innerHTML = 5 + 6;
-</script>
-<form action="http://localhost:8080/default.htm?skills=html">
-  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-  <label for="vehicle1"> I have a bike</label><br>
-  <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-  <label for="vehicle2"> I have a car</label><br>
-  <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-  <label for="vehicle3"> I have a boat</label><br><br>
-  <input type="submit" value="Submit">
-</form>
 
-  <input type="checkbox" id="C++" name="C++" value="Bike">
-  <label for="C++"> C++ (4 years), </label><br>
-  <input type="checkbox" id="C#" name="C#" value="Car">
-  <label for="C#"> C# (2 years), </label><br>
-  <input type="checkbox" id="nodejs" name="nodejs" value="Boat">
-  <label for="nodejs"> Node.js (1 year), </label><br><br>
-  <input type="submit" value="Submit">
 
-  <script>
-  document.getElementById("C++").innerHTML = 5 + 6;
-  </script>
+<button onclick="myFunction()">Try it</button>
+<p id="demo"></p>
 
 <script>
-document.write("C++");
+var url = ""
+function myFunction() {
+
+
+  var x = document.getElementById("CPP");
+  if (x.checked)
+	{
+
+     if (url.endsWith("="))
+     {
+       url = url + "C++ (4 years)";
+     }
+     else
+     {
+       url = url + "C++ (4 years)";
+     }
+	}
+
+  x = document.getElementById("CSharp");
+  if (x.checked)
+	{
+    if (url.endsWith("="))
+    {
+      url = url + "C# (2 years)";
+    }
+    else
+    {
+      url = url + ",C# (2 years)";
+    }
+
+
+	}
+
+  var x = document.getElementById("SQL");
+  if (x.checked)
+	{
+    if (url.endsWith("="))
+    {
+      url = url + "SQL (1 year)";
+    }
+    else
+    {
+      url = url + ", SQL (1 year)";
+    }
+
+	}
+
+  var x = document.getElementById("Python");
+  if (x.checked)
+	{
+	   url = url + ", Python (1 year)";
+	}
+
+  var x = document.getElementById("Java");
+  if (x.checked)
+	{
+	   url = url + ", Java (1 year)";
+	}
+
+  var x = document.getElementById("Node");
+  if (x.checked)
+	{
+    if (url.endsWith("="))
+    {
+      url = url + "Node.js (1 year)";
+    }
+    else
+    {
+      url = url + ", Node.js (1 year)";
+    }
+
+	}
+
+  var x = document.getElementById("Git");
+  if (x.checked)
+	{
+	   url = url + ", Git (4 years)";
+	}
+
+  var x = document.getElementById("SQL");
+  if (x.checked)
+	{
+	   url = url + ", SQL (1 year)";
+	}
+
+  var x = document.getElementById("JS");
+  if (x.checked)
+	{
+    if (url.endsWith("="))
+    {
+      url = url + "JavaScript (2 years)";
+    }
+    else
+    {
+      url = url + ", JavaScript (2 years)";
+    }
+
+	}
+
+  var x = document.getElementById("JSON");
+  if (x.checked)
+	{
+	   url = url + ", JSON and XML (1 year)";
+	}
+	console.log(url);
+
+  document.getElementById("demo").innerHTML = url;
+
+
+}
 </script>
 
 </body>
