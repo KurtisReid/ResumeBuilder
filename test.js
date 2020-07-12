@@ -30,6 +30,10 @@ docx.on('error', function(err) {
   console.log(err)
 })
  
+ // split string at / for skills and positions
+ var positions = urlParam.split("/");
+console.log("skills = " + positions[0]);
+console.log("positions = " + positions[1]); 
 // Create a new paragraph:
 let pObj = docx.createP()
 pObj.addText(urlParam);
